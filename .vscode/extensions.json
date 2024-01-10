@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "yoavbls.pretty-ts-errors",
+        "orta.vscode-jest",
+        "tabnine.tabnine-vscode",
+        "eamodio.gitlens",
+        "divyansh.reactsnippets",
+        "visualstudioexptteam.vscodeintellicode"
+    ]
+}
