@@ -25,9 +25,6 @@ export default function LearnWithHidden() {
         setIndexItem(0)
     },[indexTab])
 
-    // useEffect(() => {
-    //     console.log(swap);
-    // }, [swap])
 
     return (
         <div className='h-screen w-screen flex flex-col items-center pt-20'>
@@ -45,8 +42,8 @@ export default function LearnWithHidden() {
                             prev
                         </Button>
                         <div className="flex h-full flex-col flex-1 justify-around">
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.first && <DisplayWords isHidden={swap} item={wordsHidden[indexTab].review[indexItem]?.first}/>}
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.last && <DisplayWords isHidden={!swap} item={wordsHidden[indexTab].review[indexItem]?.last}/>}
+                            { wordsHidden?.[indexTab]?.review[indexItem]?.first && <DisplayWords isHidden={swap} items={wordsHidden[indexTab].review[indexItem]?.first}/>}
+                            { wordsHidden?.[indexTab]?.review[indexItem]?.last && <DisplayWords isHidden={!swap} items={wordsHidden[indexTab].review[indexItem]?.last}/>}
                         </div>
                         <Button className="h-full" onClick={() => setIndexItem((state) => state + 1 <= wordsHidden[indexTab].review.length-1 ? state + 1 : state) }>
                             next

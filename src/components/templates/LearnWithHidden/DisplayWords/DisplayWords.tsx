@@ -1,6 +1,5 @@
 import { TReviewHiddenItem } from "@/api/interface/hidden.interface"
 import ButtonHidden from "@/components/ui/ButtonHidden"
-import { useEffect, useMemo, useState } from "react"
 
 type Props = {
     items: TReviewHiddenItem[]
