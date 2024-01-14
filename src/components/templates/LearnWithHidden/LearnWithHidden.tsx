@@ -16,25 +16,37 @@ export default function LearnWithHidden() {
     const [indexTab, setIndexTab] = useState(0)
     const [indexItem, setIndexItem] = useState(0)
 
+    const [swap, setSwap] = useState(true)
+
     const { data } = useQuery({ ...cerebroQueryKeys.cerebro_learnHidden.all() });
     const wordsHidden = data as IReviewHidden[]
 
     useEffect(() => {
         setIndexItem(0)
     },[indexTab])
+
+    // useEffect(() => {
+    //     console.log(swap);
+    // }, [swap])
+
     return (
         <div className='h-screen w-screen flex flex-col items-center pt-20'>
             <div className="flex flex-col max-w-[1000px] w-full gap-4">
-                {wordsHidden && <div className="flex gap-3 max-w-[1000px]"><span>Tabs: </span><Pagination numberBtn={wordsHidden.length} onClick={(nb) => setIndexTab(nb)} /></div>}
-                {/* {wordsHidden && <Pagination numberBtn={wordsHidden[indexTab]?.review.length} onClick={(nb) => setIndexItem(nb)} />} */}
+                {wordsHidden && <div className="flex gap-3 w-full max-w-[1000px] justify-between items-end">
+                    <div>
+                        <span>Tabs: </span>
+                        <Pagination numberBtn={wordsHidden.length} onClick={(nb) => setIndexTab(nb)} />
+                    </div>
+                    <Button onClick={() => setSwap((state) => !state)}>Swap hidden words</Button>
+                </div>}
                 <BoxLearn className="flex justify-around" >
                     <div className="flex w-full justify-between items-center">
                         <Button className="h-full" onClick={() => setIndexItem((state) => state - 1 >= 0  ? state - 1 : state) }>
                             prev
                         </Button>
                         <div className="flex h-full flex-col flex-1 justify-around">
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.first && <DisplayWords isHidden item={wordsHidden[indexTab].review[indexItem]?.first}/>}
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.last && <DisplayWords item={wordsHidden[indexTab].review[indexItem]?.last}/>}
+                            { wordsHidden?.[indexTab]?.review[indexItem]?.first && <DisplayWords isHidden={swap} item={wordsHidden[indexTab].review[indexItem]?.first}/>}
+                            { wordsHidden?.[indexTab]?.review[indexItem]?.last && <DisplayWords isHidden={!swap} item={wordsHidden[indexTab].review[indexItem]?.last}/>}
                         </div>
                         <Button className="h-full" onClick={() => setIndexItem((state) => state + 1 <= wordsHidden[indexTab].review.length-1 ? state + 1 : state) }>
                             next

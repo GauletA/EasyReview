@@ -1,15 +1,16 @@
 import { TReviewHiddenItem } from "@/api/interface/hidden.interface"
 import ButtonHidden from "@/components/ui/ButtonHidden"
-import { useEffect } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 type Props = {
-    item: TReviewHiddenItem[]
+    items: TReviewHiddenItem[]
     isHidden?: boolean
 }
 
-export default function DisplayWords({item, isHidden = false}: Props) {
+export default function DisplayWords({items, isHidden = false}: Props) {
+
     return (<div className="flex justify-center gap-4">
-        {item.map(item => (
+        {items.map(item => (
             <ButtonHidden key={`${item.index}-hidden`} isHidden={isHidden} str={item.word} />
         ))}
     </div>)
