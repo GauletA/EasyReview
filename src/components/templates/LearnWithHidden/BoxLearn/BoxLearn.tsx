@@ -1,14 +1,14 @@
-import { useQuery } from "@tanstack/react-query";
 
-import {cerebroQueryKeys} from "@/api/queries/index"
+import { ReactElement } from "react";
+import { twMerge } from "tailwind-merge";
 
-export default function BoxLearn () {
+type Props = {
+    children: ReactElement
+    className?: string
+}
 
-    const { data } = useQuery({ ...cerebroQueryKeys.cerebro_learnHidden.all() });
-
-    console.log("data: ",data);
-
-    return (<div className="card w-full h-[600px] max-w-[1000px] p-1">
-        box
+export default function BoxLearn ({children, className}: Props) {
+    return (<div className={twMerge(className, "card w-full h-[400px] max-w-[1000px] p-4")}>
+        {children}
     </div>)
 }

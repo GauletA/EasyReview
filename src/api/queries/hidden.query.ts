@@ -1,3 +1,4 @@
+import { wordsTab } from "@/mock/hidden.mock";
 import { API_CEREBRO } from "@/utils/axios";
 import { createQueryKeys } from "@lukemorales/query-key-factory";
 
@@ -23,8 +24,8 @@ export const cerebrolearnHiddenQueryKeys = createQueryKeys('cerebro_learnHidden'
 		return {
 			queryKey: [''],
 			queryFn: (): Promise<any> =>
-            new Promise((resolve, reject) => {
-                  resolve({data: "dataaaa"});
+            new Promise((resolve) => {
+                  resolve(wordsTab);
               })
 		};
 	},

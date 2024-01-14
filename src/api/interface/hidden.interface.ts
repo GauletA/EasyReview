@@ -2,7 +2,7 @@
 export type TReviewHiddenItem = { word: string; index: number }
 
 export type TReviewPair = {
-       first: TReviewHiddenItem[],
+    first: TReviewHiddenItem[],
     last: TReviewHiddenItem[]
 }
 

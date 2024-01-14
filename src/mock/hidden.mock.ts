@@ -574,4 +574,4 @@ const string7: IReviewHidden = {
     i mean it= Je suis sincère
     */
 
-export const wordsTab3 = [ string1, string2, string3, string4, string5, string6, string7, string8, string9, string10];
+export const wordsTab: IReviewHidden[]  = [ string1, string2, string3, string4, string5, string6, string7, string8, string9, string10];
