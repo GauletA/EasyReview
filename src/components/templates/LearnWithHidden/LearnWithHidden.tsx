@@ -34,21 +34,25 @@ export default function LearnWithHidden() {
                         <span>Tabs: </span>
                         <Pagination numberBtn={wordsHidden.length} onClick={(nb) => setIndexTab(nb)} />
                     </div>
+
                     <Button onClick={() => setSwap((state) => !state)}>Swap hidden words</Button>
                 </div>}
-                <BoxLearn className="flex justify-around" >
-                    <div className="flex w-full justify-between items-center">
+                <BoxLearn className="flex flex-col items-center" >
+                    <>
+                    <div>Tab : {indexTab}</div>
+                    <div className="flex flex-1 w-full justify-between items-center">
                         <Button className="h-full" onClick={() => setIndexItem((state) => state - 1 >= 0  ? state - 1 : state) }>
                             prev
                         </Button>
                         <div className="flex h-full flex-col flex-1 justify-around">
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.first && <DisplayWords isHidden={swap} items={wordsHidden[indexTab].review[indexItem]?.first}/>}
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.last && <DisplayWords isHidden={!swap} items={wordsHidden[indexTab].review[indexItem]?.last}/>}
+                            { wordsHidden?.[indexTab]?.review[indexItem]?.first && <DisplayWords isHidden={true} items={swap ? wordsHidden[indexTab].review[indexItem]?.first : wordsHidden[indexTab].review[indexItem]?.last }/>}
+                            { wordsHidden?.[indexTab]?.review[indexItem]?.last && <DisplayWords isHidden={false} items={!swap ? wordsHidden[indexTab].review[indexItem]?.first : wordsHidden[indexTab].review[indexItem]?.last }/>}
                         </div>
                         <Button className="h-full" onClick={() => setIndexItem((state) => state + 1 <= wordsHidden[indexTab].review.length-1 ? state + 1 : state) }>
                             next
                         </Button>
                     </div>
+                    </>
                 </BoxLearn>
             </div>
         </div>
