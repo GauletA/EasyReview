@@ -550,6 +550,14 @@ const string7: IReviewHidden = {
             {
                 first: [{ word: "told", index: 0 }, { word: "tell", index: 1 }],
                 last: [{ word: "raconté", index: 2 }, { word: "dire", index: 3 }]
+            }
+        ]
+    };
+    const string11: IReviewHidden = {
+        review: [
+            {
+                first: [{ word: "slate", index: 0 }],
+                last: [{ word: "ardoise", index: 1 }]
             },
             {
                 first: [{ word: "dropped", index: 0 }],
@@ -559,19 +567,304 @@ const string7: IReviewHidden = {
                 first: [{ word: "reached down", index: 0 }],
                 last: [{ word: "a atteint le sol", index: 1 }]
             },
+            {
+                first: [{ word: "carry", index: 0 }],
+                last: [{ word: "transporter", index: 1 }, { word: "porter", index: 2 }]
+            },
+            {
+                first: [{ word: "crowd", index: 0 }],
+                last: [{ word: "la foule", index: 1 }]
+            },
+            {
+                first: [{ word: "worship", index: 0 }],
+                last: [{ word: "culte", index: 1 }, { word: "adoration", index: 2 }]
+            },
+            {
+                first: [{ word: "overdue", index: 0 }],
+                last: [{ word: "en retard", index: 1 }]
+            },
+            {
+                first: [{ word: "no matter", index: 0 }],
+                last: [{ word: "peu importe", index: 1 }]
+            },
+            {
+                first: [{ word: "customers", index: 0 }],
+                last: [{ word: "clients", index: 1 }]
+            },
+            {
+                first: [{ word: "dug up", index: 0 }],
+                last: [{ word: "deterrer", index: 1 }]
+            },
+        ]
+    }
+
+    const string12: IReviewHidden = {
+        review: [
+            { first: [{ word: "accuracy", index: 0 }], last: [{ word: "précision", index: 1 }] },
+            { first: [{ word: "your strengths and weaknesses", index: 0 }], last: [{ word: "vos forces et vos faiblesses", index: 1 }] },
+            { first: [{ word: "suitable", index: 0 }], last: [{ word: "adapté", index: 1 }] },
+            { first: [{ word: "involve", index: 0 }], last: [{ word: "impliqué", index: 1 }] },
+            { first: [{ word: "regular", index: 0 }], last: [{ word: "régulier", index: 1 }] },
+            { first: [{ word: "overview", index: 0 }], last: [{ word: "aperçu", index: 1 }] },
+            { first: [{ word: "there is no one who can", index: 0 }], last: [{ word: "il n'y a aucune personne qui peut", index: 1 }] },
+            { first: [{ word: "nasty", index: 0 }], last: [{ word: "méchant / désagréable", index: 1 }] },
+            { first: [{ word: "i mean it", index: 0 }], last: [{ word: "Je suis sincère", index: 1 }] },
+
+
+            { first: [{ word:  "first", index: 0 }], last: [{ word: "premier", index: 1 }] },
+            { first: [{ word: "second", index: 0 }], last: [{ word:  "deuxième", index: 1 }] },
+            { first: [{ word: "third", index: 0 }], last: [{ word: "troisième", index: 1 }] },
+            { first: [{ word: "fourth", index: 0 }], last: [{ word: "quatrième" , index: 1 }] },
+            { first: [{ word: "fifth", index: 0 }], last: [{ word: "cinquième", index: 1 }] },
+            { first: [{ word: "sixth", index: 0 }], last: [{ word: "sixième", index: 1 }] },
+
+
+            { first: [{ word: "leaning", index: 0 }], last: [{ word: "penchant", index: 1 }] },
+            { first: [{ word: "shall", index: 0 }], last: [{ word: "doivent", index: 1 }] },
+            { first: [{ word: "at least", index: 0 }], last: [{ word: "au moins", index: 1 }] },
+            { first: [{ word: "waiter", index: 0 }], last: [{ word: "serveur", index: 1 }] },
+            { first: [{ word: "boil", index: 0 }], last: [{ word: "bouillir", index: 1 }] },
+            { first: [{ word: "interesting", index: 0 }], last: [{ word: "intéressant", index: 1 }] },
+            { first: [{ word: "bottle", index: 0 }], last: [{ word: "bouteille", index: 1 }] },
+            { first: [{ word: "retired", index: 0 }], last: [{ word: "retraite", index: 1 }] },
+            { first: [{ word: "relatives", index: 0 }], last: [{ word: "les proches (famille ou parent)", index: 1 }] },
+            { first: [{ word: "since", index: 0 }], last: [{ word: "depuis", index: 1 }] },
+            { first: [{ word: "worry", index: 0 }], last: [{ word: "s'inquiéter", index: 1 }] },
+            { first: [{ word: "worried", index: 0 }], last: [{ word: "inquiet", index: 1 }] },
+            { first: [{ word: "glad", index: 0 }], last: [{ word: "heureux", index: 1 }] },
+            { first: [{ word: "wear", index: 0 }], last: [{ word: "porter", index: 1 }] },
+            { first: [{ word: "mall", index: 0 }], last: [{ word: "centre commercial", index: 1 }] },
+            { first: [{ word: "cup", index: 0 }], last: [{ word: "tasse", index: 1 }] },
+            { first: [{ word: "awake", index: 0 }], last: [{ word: "éveillé", index: 1 }] },
+            { first: [{ word: "upcoming", index: 0 }], last: [{ word: "à venir", index: 1 }] },
+            { first: [{ word: "chores", index: 0 }], last: [{ word: "corvées", index: 1 }] },
+            { first: [{ word: "tidy up", index: 0 }], last: [{ word: "ranger", index: 1 }] },
+            { first: [{ word: "spotless", index: 0 }], last: [{ word: "impeccable", index: 1 }] },
+            { first: [{ word: "groceries", index: 0 }], last: [{ word: "épicerie", index: 1 }] },
+            { first: [{ word: "mop", index: 0 }], last: [{ word: "serpillière", index: 1 }] },
+            { first: [{ word: "dusted", index: 0 }], last: [{ word: "dépoussiéré", index: 1 }] },
+            { first: [{ word: "rug", index: 0 }], last: [{ word: "tapis", index: 1 }] },
+            { first: [{ word: "vacuum", index: 0 }], last: [{ word: "aspirateur", index: 1 }] },
+            { first: [{ word: "dry", index: 0 }], last: [{ word: "sec, séché", index: 1 }] },
+            { first: [{ word: "warm", index: 0 }], last: [{ word: "chaud, chaleureux", index: 1 }] },
+            { first: [{ word: "the team lacks organization", index: 0 }], last: [{ word: "l'equipe manque d'organisation", index: 1 }] },
+            { first: [{ word: "I'm quite close", index: 0 }], last: [{ word: "Je suis assez proche", index: 1 }] },
+            { first: [{ word: "That does not seem very interesting", index: 0 }], last: [{ word: "Cela ne semble pas très intéressant", index: 1 }] },
+            { first: [{ word: "Well, have you made up your minds", index: 0 }], last: [{ word: "Avez-vous pris votre décision ?", index: 1 }] },
+            { first: [{ word: "yes, I grew up there", index: 0 }], last: [{ word: "Oui, j'ai grandi là-bas", index: 1 }] },
+            { first: [{ word: "I'm getting dressed", index: 0 }], last: [{ word: "Je m'habille", index: 1 }] },
+            { first: [{ word: "I'm driving to work", index: 0 }], last: [{ word: "Je me rends au travail en voiture", index: 1 }] },
+            { first: [{ word: "I'm going to the mall", index: 0 }], last: [{ word: "Je vais au centre commercial", index: 1 }] },
+            { first: [{ word: "I'm gonna get some coffee", index: 0 }], last: [{ word: "Je vais chercher du café", index: 1 }] },
+            { first: [{ word: "for instance", index: 0 }], last: [{ word: "par exemple", index: 1 }] },
+            { first: [{ word: "you can sweep", index: 0 }], last: [{ word: "vous pouvez balayer", index: 1 }] },
         ]
     };
 
-    /*
-    accuracy = précision
-    your strengths and weaknesses = vos forces et vos faiblesses
-    suitable = adapté
-    involve = impliqué
-    regular = régulié
-    overview = apercu
-    there is no one who can  = il n'y a aucune personne qui peu 
-    nasty = mechant / desagreable
-    i mean it= Je suis sincère
-    */
+        const string13: IReviewHidden = {
+            review: [
+                {
+                    first: [{ word: "gotten", index: 0 }],
+                    last: [{ word: "obtenu", index: 1 }]
+                },
+                {
+                    first: [{ word: "wild", index: 0 }],
+                    last: [{ word: "sauvage", index: 1 }]
+                },
+                {
+                    first: [{ word: "hung up", index: 0 }],
+                    last: [{ word: "raccroché", index: 1 }]
+                },
+                {
+                    first: [{ word: "laid", index: 0 }],
+                    last: [{ word: "posé", index: 1 }]
+                },
+                {
+                    first: [{ word: "chest", index: 0 }],
+                    last: [{ word: "poitrine", index: 1 }]
+                },
+                {
+                    first: [{ word: "back then", index: 0 }],
+                    last: [{ word: "à l'époque", index: 1 }]
+                },
+                {
+                    first: [{ word: "afterward", index: 0 }],
+                    last: [{ word: "par la suite", index: 1 }]
+                },
+                {
+                    first: [{ word: "blend", index: 0 }],
+                    last: [{ word: "mélange", index: 1 }]
+                },
+                {
+                    first: [{ word: "vividly recall", index: 0 }],
+                    last: [{ word: "se rappeler vivement", index: 1 }]
+                },
+                {
+                    first: [{ word: "stepped forward", index: 0 }],
+                    last: [{ word: "a fait un pas en avant", index: 1 }]
+                },
+                {
+                    first: [{ word: "and impressed the teacher", index: 0 }],
+                    last: [{ word: "et impressionné le professeur", index: 1 }]
+                },
+                {
+                    first: [{ word: "fearing every word", index: 0 }],
+                    last: [{ word: "craignant chaque mot", index: 1 }]
+                },
+                {
+                    first: [{ word: "we need to break free from that fear and embrace this language", index: 0 }],
+                    last: [{ word: "Nous devons nous libérer de cette peur et embrasser cette langue.", index: 1 }]
+                },
+                {
+                    first: [{ word: "and figure out what I want", index: 0 }],
+                    last: [{ word: "et déterminer ce que je veux", index: 1 }]
+                },
+                {
+                    first: [{ word: "So I've gotta really think things through", index: 0 }],
+                    last: [{ word: "Je dois donc vraiment réfléchir à tout cela", index: 1 }]
+                },
+                {
+                    first: [{ word: "But what I do know is that we definitely have a connection", index: 0 }],
+                    last: [{ word: "Mais ce que je sais, c'est qu'il existe un lien entre nous", index: 1 }]
+                },
+                {
+                    first: [{ word: "And I wanna continue to get to know her and talk to her", index: 0 }],
+                    last: [{ word: "Et je veux continuer à la connaître et à lui parler", index: 1 }]
+                },
+                {
+                    first: [{ word: "tell me your biggest achievement", index: 0 }],
+                    last: [{ word: "dis-moi ta plus grande réussite", index: 1 }]
+                },
+                {
+                    first: [{ word: "My parents didn't really support me going", index: 0 }],
+                    last: [{ word: "Mes parents ne m'ont pas vraiment soutenu", index: 1 }]
+                },
+                {
+                    first: [{ word: "they thought I was gonna waste all my money...", index: 0 }],
+                    last: [{ word: "Ils pensaient que j'allais gaspiller tout mon argent...", index: 1 }]
+                },
+                {
+                    first: [{ word: "I bet you're the best, damn one", index: 0 }],
+                    last: [{ word: "Je parie que tu es le meilleur, putain", index: 1 }]
+                },
+                {
+                    first: [{ word: "I bet you're the best there too", index: 0 }],
+                    last: [{ word: "Je parie que tu es le meilleur là-bas aussi", index: 1 }]
+                },
+                {
+                    first: [{ word: "sorry to bring up other people", index: 0 }],
+                    last: [{ word: "désolé d'évoquer d'autres personnes", index: 1 }]
+                },
+                {
+                    first: [{ word: "I just have had a lot dumped on me today", index: 0 }],
+                    last: [{ word: "J'ai reçu beaucoup de choses aujourd'hui.", index: 1 }]
+                },
+                {
+                    first: [{ word: "I'm just trying to figure out how to change the subject", index: 0 }],
+                    last: [{ word: "j'essaie juste de trouver comment changer de sujet", index: 1 }]
+                },
+                {
+                    first: [{ word: "cause I tend to catch feeling pretty fast", index: 0 }],
+                    last: [{ word: "parce que j'ai tendance à me sentir bien assez vite", index: 1 }]
+                },
+                {
+                    first: [{ word: "You're not gonna like everyone.", index: 0 }],
+                    last: [{ word: "Vous n'allez pas aimer tout le monde.", index: 1 }]
+                },
+                {
+                    first: [{ word: "I don't even know", index: 0 }],
+                    last: [{ word: "Je ne sais même pas", index: 1 }]
+                },
+                {
+                    first: [{ word: "I feel like every time is fun with you", index: 0 }],
+                    last: [{ word: "J'ai l'impression qu'on s'amuse toujours avec toi", index: 1 }]
+                },
+                {
+                    first: [{ word: "Have you ever told someone 'I love you' but didn't mean it?", index: 0 }],
+                    last: [{ word: "Avez-vous déjà dit à quelqu'un 'je t'aime' sans le penser ?", index: 1 }]
+                },
+                {
+                    first: [{ word: "but I don't think it was really what I was feeling", index: 0 }],
+                    last: [{ word: "mais je ne pense pas que ce soit vraiment ce que je ressentais", index: 1 }]
+                },
+                {
+                    first: [{ word: "I made a man cry", index: 0 }],
+                    last: [{ word: "J'ai fait pleurer un homme", index: 1 }]
+                },
+                {
+                    first: [{ word: "I've never felt like I was chosen by the one I wanted", index: 0 }],
+                    last: [{ word: "Je n'ai jamais eu l'impression d'être choisi par celui que je voulais.", index: 1 }]
+                },
+                {
+                    first: [{ word: "I feel like I understand you", index: 0 }],
+                    last: [{ word: "J'ai l'impression de vous comprendre", index: 1 }]
+                },
+                {
+                    first: [{ word: "And I feel like as a man of your caliber", index: 0 }],
+                    last: [{ word: "Et j'ai l'impression qu'en tant qu'homme de votre calibre", index: 1 }]
+                },
+                {
+                    first: [{ word: "I wanna get to know you more", index: 0 }],
+                    last: [{ word: "Je veux te connaître davantage", index: 1 }]
+                },
+                {
+                    first: [{ word: "I had a rough start", index: 0 }],
+                    last: [{ word: "J'ai eu un départ difficile", index: 1 }]
+                },
+                {
+                    first: [{ word: "I'm gonna live out my worst fears.", index: 0 }],
+                    last: [{ word: "Je vais vivre mes pires craintes.", index: 1 }]
+                }
+            ]
+        }
+        
+        /*
+        
+        leasing
+        renewed
 
-export const wordsTab: IReviewHidden[]  = [ string1, string2, string3, string4, string5, string6, string7, string8, string9, string10];
+        bucket of water =  seau d eau
+
+        rope = corde 
+
+        we'll play tag team
+
+        regardless  = sans tenir compte 
+
+        obviously = évidemment
+
+        i overcome = je surmonte mes 
+
+        are we plotting right now?
+
+        it suits you like a glove= il vous va comme un gant
+
+        cause we ain't doing that= parce que nous ne le ferons pas.
+
+        and i haven't gone on a single date since = et je n'ai pas eu un seul rendez-vous depuis
+
+        i usually jump into things right away, . = J'ai l'habitude de me lancer tout de suite dans les choses,
+
+        and i'll get literally nothing back =  et je ne reçois littéralement rien en retour.
+
+        if i'm into you and i like you,= si tu me plais et que je t'aime bien,
+
+        that looks mad comfy over there. = ça a l'air super confortable là-bas.
+
+        more people are coming in the coming days = d'autres personnes viendront dans les prochains jours
+
+        i think im a little too smart for these guys  = Je pense que je suis un peu trop intelligent pour ces gars-là. 
+
+        to turning them on = de les allumer
+
+        that's what made us who are now  = c'est ce qui a fait de nous ce que nous sommes aujourd'hui 
+
+        are you over your exes? = Avez-vous oublié vos ex ?
+
+        you got that right = Vous avez raison
+
+        fran turned him down = fran l'a refusé
+
+        */
+
+export const wordsTab: IReviewHidden[]  = [ string1, string2, string3, string4, string5, string6, string7, string8, string9, string10, string11, string12, string13];

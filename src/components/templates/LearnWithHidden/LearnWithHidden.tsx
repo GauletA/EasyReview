@@ -5,11 +5,12 @@ import {cerebroQueryKeys} from "@/api/queries/index"
 
 import ButtonHidden from "@/components/ui/ButtonHidden";
 import BoxLearn from "./BoxLearn"
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import DisplayWords from "./DisplayWords/DisplayWords";
 import { IReviewHidden } from "@/api/interface/hidden.interface";
 import Pagination from "@/components/ui/Pagination";
 import Button from "@/components/ui/Button";
+import { shuffleArray } from "@/utils/common";
 
 
 export default function LearnWithHidden() {
@@ -23,8 +24,9 @@ export default function LearnWithHidden() {
 
     useEffect(() => {
         setIndexItem(0)
-    },[indexTab])
+    }, [indexTab])
 
+    const tabFloor = useMemo(() => wordsHidden?.[indexTab] ? shuffleArray(wordsHidden?.[indexTab].review) : [], [indexTab, wordsHidden])
 
     return (
         <div className='h-screen w-screen flex flex-col items-center pt-20'>
@@ -35,7 +37,10 @@ export default function LearnWithHidden() {
                         <Pagination numberBtn={wordsHidden.length} onClick={(nb) => setIndexTab(nb)} />
                     </div>
 
+                    <div className=" flex gap-2">
+                    <Button onClick={() => setIndexItem(0)}>Start</Button>
                     <Button onClick={() => setSwap((state) => !state)}>Swap hidden words</Button>
+                    </div>
                 </div>}
                 <BoxLearn className="flex flex-col items-center" >
                     <>
@@ -45,10 +50,10 @@ export default function LearnWithHidden() {
                             prev
                         </Button>
                         <div className="flex h-full flex-col flex-1 justify-around">
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.first && <DisplayWords isHidden={true} items={swap ? wordsHidden[indexTab].review[indexItem]?.first : wordsHidden[indexTab].review[indexItem]?.last }/>}
-                            { wordsHidden?.[indexTab]?.review[indexItem]?.last && <DisplayWords isHidden={false} items={!swap ? wordsHidden[indexTab].review[indexItem]?.first : wordsHidden[indexTab].review[indexItem]?.last }/>}
+                            { tabFloor[indexItem]?.first && <DisplayWords isHidden={true} items={ swap ?  tabFloor[indexItem]?.first : tabFloor[indexItem]?.last}/>}
+                            { tabFloor[indexItem]?.last && <DisplayWords isHidden={false} items={ !swap ? tabFloor[indexItem]?.first : tabFloor[indexItem]?.last }/>}
                         </div>
-                        <Button className="h-full" onClick={() => setIndexItem((state) => state + 1 <= wordsHidden[indexTab].review.length-1 ? state + 1 : state) }>
+                        <Button className="h-full" onClick={() => setIndexItem((state) => state + 1 <= tabFloor.length-1 ? state + 1 : state) }>
                             next
                         </Button>
                     </div>
