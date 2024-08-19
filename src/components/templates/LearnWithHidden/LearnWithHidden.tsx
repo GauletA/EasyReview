@@ -33,24 +33,28 @@ export default function LearnWithHidden() {
             <div className="flex flex-col max-w-[1000px] w-full gap-4">
                 {wordsHidden && <div className="flex gap-3 w-full max-w-[1000px] justify-between items-end">
                     <div>
-                        <span>Tabs: </span>
+                        <div className="mb-2">Tabs: {indexTab}</div>
                         <Pagination numberBtn={wordsHidden.length} onClick={(nb) => setIndexTab(nb)} />
                     </div>
 
                     <div className=" flex gap-2">
                     <Button onClick={() => setIndexItem(0)}>Start</Button>
-                    <Button onClick={() => setSwap((state) => !state)}>Swap hidden words</Button>
+                    
                     </div>
                 </div>}
                 <BoxLearn className="flex flex-col items-center" >
                     <>
-                    <div>Tab : {indexTab}</div>
                     <div className="flex flex-1 w-full justify-between items-center">
                         <Button className="h-full" onClick={() => setIndexItem((state) => state - 1 >= 0  ? state - 1 : state) }>
                             prev
                         </Button>
-                        <div className="flex h-full flex-col flex-1 justify-around">
+                        <div className="relative flex h-full flex-col flex-1 justify-between items-center">
+                        <div className="absolute top-0 bottom-0 flex flex-col justify-center">
+                            <Button className="w-min" onClick={() => setSwap((state) => !state)}>Swap</Button>
+                        </div>
                             { tabFloor[indexItem]?.first && <DisplayWords isHidden={swap} items={  tabFloor[indexItem]?.first }/>}
+                          
+                           
                             { tabFloor[indexItem]?.last && <DisplayWords isHidden={!swap} items={  tabFloor[indexItem]?.last }/>}
                         </div>
                         <Button className="h-full" onClick={() => setIndexItem((state) => state + 1 <= tabFloor.length-1 ? state + 1 : state) }>
