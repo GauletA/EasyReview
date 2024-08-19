@@ -62,7 +62,7 @@ export default function ButtonHidden({ className, isHidden = false, str}: Props)
 
             {isHidden && <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex flex-col gap-2">
-                    <input type="text" className={twJoin("rounded-md px-2 dark:bg-gray-950" )}  {...register('value')}   />
+                    <input autoComplete="off" type="text" className={twJoin("rounded-md px-2 dark:bg-gray-950" )}  {...register('value')}   />
                 </div>
             </form>}
         </div>
