@@ -43,8 +43,8 @@ export default function LearnWithHidden() {
                 <BoxLearn className="flex flex-col items-center" >
                     <>
                         <div className="flex flex-1 w-full justify-between items-center">
-                            <Button className="h-full" onClick={() => setIndexItem((state) => state - 1 >= 0  ? state - 1 : state) }>
-                                prev
+                            <Button className="text-3xl" onClick={() => setIndexItem((state) => state - 1 >= 0  ? state - 1 : state) }>
+                            {'<'}
                             </Button>
                             <div className="relative flex h-full flex-col flex-1 justify-between items-center">
                                 <div className="absolute top-0 bottom-0 flex flex-col justify-center">
@@ -53,8 +53,8 @@ export default function LearnWithHidden() {
                                 { tabFloor[indexItem]?.first && <DisplayWords isHidden={swap} items={  tabFloor[indexItem]?.first }/>}
                                 { tabFloor[indexItem]?.last && <DisplayWords isHidden={!swap} items={  tabFloor[indexItem]?.last }/>}
                             </div>
-                            <Button className="h-full" onClick={() => setIndexItem((state) => state + 1 <= tabFloor.length-1 ? state + 1 : state) }>
-                                next
+                            <Button className="text-3xl" onClick={() => setIndexItem((state) => state + 1 <= tabFloor.length-1 ? state + 1 : state) }>
+                                {'>'}
                             </Button>
                         </div>
                     </>
