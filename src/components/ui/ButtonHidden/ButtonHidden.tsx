@@ -14,6 +14,9 @@ export default function ButtonHidden({ className, isHidden = false, str}: Props)
 
     useEffect(() => {
         setHiddenState(isHidden)
+        return () => {
+            setHiddenState(true)
+        }
     }, [str])
 
     return (

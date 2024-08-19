@@ -621,7 +621,7 @@ const string7: IReviewHidden = {
 
             { first: [{ word: "leaning", index: 0 }], last: [{ word: "penchant", index: 1 }] },
             { first: [{ word: "shall", index: 0 }], last: [{ word: "doivent", index: 1 }] },
-            { first: [{ word: "at least", index: 0 }], last: [{ word: "au moins", index: 1 }] },
+            { first: [{ word: "at least i could come", index: 0 }], last: [{ word: "au moins je pourrais venir ", index: 1 }] },
             { first: [{ word: "waiter", index: 0 }], last: [{ word: "serveur", index: 1 }] },
             { first: [{ word: "boil", index: 0 }], last: [{ word: "bouillir", index: 1 }] },
             { first: [{ word: "interesting", index: 0 }], last: [{ word: "intéressant", index: 1 }] },
