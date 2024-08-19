@@ -10,14 +10,13 @@ type Props = {
 }
 
 export default function ButtonHidden({ className, isHidden = false, str}: Props) {
-    const [isHiddenState, setHiddenState] = useState(isHidden)
+    const [isHiddenState, setHiddenState] = useState(true)
+    const [isStr, setStr] = useState('')
 
     useEffect(() => {
         setHiddenState(isHidden)
-        return () => {
-            setHiddenState(true)
-        }
-    }, [str])
+        setStr(str)
+    }, [str, isHidden])
 
     return (
         <button
@@ -25,7 +24,7 @@ export default function ButtonHidden({ className, isHidden = false, str}: Props)
             onClick={() => {
                 setHiddenState(state => !state)
             }}>
-                <span className={twJoin("text-xl", isHiddenState && "opacity-0")}>{str}</span>
+                <span className={twJoin("text-xl", isHiddenState && "opacity-0")}>{isStr}</span>
         </button>
     ) 
 }
