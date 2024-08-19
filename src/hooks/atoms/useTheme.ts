@@ -1,4 +1,4 @@
 import { atomWithStorage } from 'jotai/utils'
-type TThemAtom = 'light' | 'dark' | undefined
+type TThemAtom = 'light' | 'dark' 
 
-export const themeAtom = atomWithStorage<TThemAtom>('theme', undefined)
+export const themeAtom = atomWithStorage<TThemAtom>('theme', 'light')

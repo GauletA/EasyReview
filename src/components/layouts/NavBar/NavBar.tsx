@@ -8,7 +8,7 @@ import { useState } from "react"
 
 export default function NavBar() {
     const [, setTheme] = useAtom(themeAtom)
-    const [indexTheme, setIndexTheme] = useState<number>(1)
+    const [indexTheme, setIndexTheme] = useState<number>(0)
 
     const handleThemeChange = (index: number) => {
         if (index === 0) setTheme('light')
