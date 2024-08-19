@@ -19,8 +19,6 @@ export default function ButtonHidden({ className, isHidden = false, str}: Props)
     const [strState, setStrState] = useState('')
     const [isValidate, setIsValidate] = useState(false)
 
-
-
     const {
         register,
         handleSubmit,
@@ -32,11 +30,12 @@ export default function ButtonHidden({ className, isHidden = false, str}: Props)
       useEffect(() => {
         setHiddenState(isHidden)
         setStrState(str)
+        
         return () => {
             reset()
             setIsValidate(false)
         }
-    }, [str, isHidden])
+    }, [str, isHidden, reset])
 
     const onSubmit: SubmitHandler<Inputs> = (data) => {        
         if (data.value != str) {
