@@ -54,8 +54,8 @@ export default function ButtonHidden({ className, isHidden = false, str}: Props)
                  <button
             className={twMerge("group px-3 py-1 rounded-lg border bg-blue-300 dark:bg-gray-950 border-transparent transition-colors hover:border-green-400 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30",
                                 className,
-                                isValidate && 'bg-green-300 border-2 border-green-500',
-                                errors.value && 'bg-red-300 border-2 border-red-500')}
+                                isValidate && 'bg-green-300  border-2 border-green-500',
+                                errors.value && 'bg-red-300  border-2 border-red-500')}
             onClick={() => {
                 setHiddenState(state => !state)
             }}>
@@ -65,7 +65,7 @@ export default function ButtonHidden({ className, isHidden = false, str}: Props)
 
         {isHidden && <form onSubmit={handleSubmit(onSubmit)}>
         <div className="flex flex-col gap-2">
-        <input type="text" className={twJoin("rounded-md px-2", )}  {...register('value')}   />
+        <input type="text" className={twJoin("rounded-md px-2 dark:bg-gray-950" )}  {...register('value')}   />
         </div>
          
         </form>}
