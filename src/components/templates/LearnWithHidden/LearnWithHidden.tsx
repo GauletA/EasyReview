@@ -11,19 +11,15 @@ import Pagination from "@/components/ui/Pagination";
 import Button from "@/components/ui/Button";
 import { shuffleArray } from "@/utils/common";
 
-
 export default function LearnWithHidden() {
     const [indexTab, setIndexTab] = useState(0)
     const [indexItem, setIndexItem] = useState(0)
+    const [search, setSearch] = useState('')
 
     const [swap, setSwap] = useState(true)
 
     const { data } = useQuery({ ...cerebroQueryKeys.cerebro_learnHidden.all() });
     const wordsHidden = data as IReviewHidden[]
-
-    useEffect(() => {
-        setIndexItem(0)
-    }, [indexTab])
 
     const tabFloor = useMemo(() => wordsHidden?.[indexTab] ? shuffleArray(wordsHidden?.[indexTab].review) : [], [indexTab, wordsHidden])
 
@@ -46,11 +42,11 @@ export default function LearnWithHidden() {
                             <Button className="text-3xl" onClick={() => setIndexItem((state) => state - 1 >= 0  ? state - 1 : state) }>
                             {'<'}
                             </Button>
-                            <div className="relative flex h-full flex-col flex-1 justify-between items-center">
-                                <div className="absolute top-0 bottom-0 flex flex-col justify-center">
-                                    <Button className="w-min" onClick={() => setSwap((state) => !state)}>Swap</Button>
+                            <div className="relative flex h-full flex-col pointer-events-none flex-1 justify-between items-center">
+                                <div className="absolute bg-blue-700/30 right-0 top-0 bottom-0 left-0 flex flex-col items-center justify-center">
+                                    <Button className="w-min h-min" onClick={() => setSwap((state) => !state)}>Swap</Button>
                                 </div>
-                                { tabFloor[indexItem]?.first && <DisplayWords isHidden={swap} items={  tabFloor[indexItem]?.first }/>}
+                                { tabFloor[indexItem]?.first && <DisplayWords  isHidden={swap} items={  tabFloor[indexItem]?.first }/>}
                                 { tabFloor[indexItem]?.last && <DisplayWords isHidden={!swap} items={  tabFloor[indexItem]?.last }/>}
                             </div>
                             <Button className="text-3xl" onClick={() => setIndexItem((state) => state + 1 <= tabFloor.length-1 ? state + 1 : state) }>
