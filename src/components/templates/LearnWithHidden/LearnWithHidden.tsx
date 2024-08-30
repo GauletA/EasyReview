@@ -42,9 +42,9 @@ export default function LearnWithHidden() {
                             <Button className="text-3xl" onClick={() => setIndexItem((state) => state - 1 >= 0  ? state - 1 : state) }>
                             {'<'}
                             </Button>
-                            <div className="relative flex h-full flex-col pointer-events-none flex-1 justify-between items-center">
-                                <div className="absolute bg-blue-700/30 right-0 top-0 bottom-0 left-0 flex flex-col items-center justify-center">
-                                    <Button className="w-min h-min" onClick={() => setSwap((state) => !state)}>Swap</Button>
+                            <div className="relative flex h-full flex-col flex-1 justify-between items-center">
+                                <div className="absolute  inset-x-1/3 inset-y-1/3  flex flex-col items-center justify-center">
+                                    <Button className="w-min h-min z-30" onClick={() => setSwap((state) => !state)}>Swap</Button>
                                 </div>
                                 { tabFloor[indexItem]?.first && <DisplayWords  isHidden={swap} items={  tabFloor[indexItem]?.first }/>}
                                 { tabFloor[indexItem]?.last && <DisplayWords isHidden={!swap} items={  tabFloor[indexItem]?.last }/>}
